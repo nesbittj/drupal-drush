@@ -1,0 +1,18 @@
+
+//build docker image from github dockerfile
+docker build -t olamalujonathan/drupal-drush https://github.com/nesbittj/drupal-drush.git
+
+//mysql container
+docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=drupaldb -e MYSQL_USER=drupal -e MYSQL_PASSWORD=drupal -d mysql:latest
+
+//run container from image, link to db
+docker run -d --link some-mysql -P olamalujonathan/drupal-drush
+
+//exec drush site-install on site in container
+drush si --site-name=$HOSTNAME --db-url=mysql://root:0lamalu*1@some-mysql/$HOSTNAME --db-su=drupal --db-su-pw=drupal
+
+//exec correct permissions on files dir
+chown -R www-data:www-data sites/default/files
+chmod -R 0700 sites/default/files
+
+//exec cache clear

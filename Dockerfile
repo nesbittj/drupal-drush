@@ -1,6 +1,6 @@
 FROM drupal
 
-RUN apt-get update && apt-get install -y wget
+RUN apt-get update && apt-get install -y wget mysql-client
 
 RUN wget http://files.drush.org/drush.phar
 RUN php drush.phar core-status
