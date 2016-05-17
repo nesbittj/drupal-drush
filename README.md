@@ -17,8 +17,9 @@ $ ./olamalu_run.sh
 ```
 or
 ```
+$ cd php
 $ php composer.phar install
-$ php php/olamalu_run.php
+$ php olamalu_run.php
 ```
 
 Bugs
