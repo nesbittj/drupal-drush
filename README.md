@@ -22,9 +22,11 @@ $ php composer.phar install
 $ php olamalu_run.php
 ```
 
-Bugs
+Bugs / Missing Features
 -------
-drush si failes to connect to mysql database when executed from shell script
+0. drush si failes to connect to mysql database when executed from shell script
+0. missing input parameters for sitename, dev directory on local machine etc
+0. docker volume is not created for dev environment
 
 
 Links
