@@ -24,3 +24,11 @@ $ php php/olamalu_run.php
 Bugs
 -------
 drush si failes to connect to mysql database when executed from shell script
+
+
+Links
+--------
+Docker Remote API client libraries
+https://docs.docker.com/engine/reference/api/remote_api_client_libraries/
+Docker inspect
+https://docs.docker.com/engine/reference/commandline/inspect/
