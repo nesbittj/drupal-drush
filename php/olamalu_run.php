@@ -4,6 +4,8 @@
 build drupal site with docker
 */
 
+require_once __DIR__ . '/vendor/autoload.php';
+
 use Docker\Docker;
 
 function olamalu_si()
